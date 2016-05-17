@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'vga640480:u1|clk'
+Slack : -6.422
+TNS   : -1783.778
+
+Type  : Slow Model Setup 'clk_0'
+Slack : -2.107
+TNS   : -33.063
+
+Type  : Slow Model Setup 'Keyboard:u3|fok'
+Slack : -1.121
+TNS   : -8.082
+
+Type  : Slow Model Setup 'vga640480:u1|clk1'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk_0'
+Slack : -2.964
+TNS   : -2.964
+
+Type  : Slow Model Hold 'vga640480:u1|clk1'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'Keyboard:u3|fok'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Slow Model Hold 'vga640480:u1|clk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'vga640480:u1|clk'
+Slack : -2.277
+TNS   : -1861.520
+
+Type  : Slow Model Minimum Pulse Width 'clk_0'
+Slack : -1.941
+TNS   : -40.525
+
+Type  : Slow Model Minimum Pulse Width 'vga640480:u1|clk1'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'Keyboard:u3|fok'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'vga640480:u1|clk'
+Slack : -2.125
+TNS   : -334.140
+
+Type  : Fast Model Setup 'Keyboard:u3|fok'
+Slack : -0.281
+TNS   : -1.920
+
+Type  : Fast Model Setup 'clk_0'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Fast Model Setup 'vga640480:u1|clk1'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk_0'
+Slack : -1.780
+TNS   : -1.780
+
+Type  : Fast Model Hold 'vga640480:u1|clk1'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'vga640480:u1|clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Keyboard:u3|fok'
+Slack : 0.798
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'vga640480:u1|clk'
+Slack : -1.423
+TNS   : -1168.864
+
+Type  : Fast Model Minimum Pulse Width 'clk_0'
+Slack : -1.380
+TNS   : -27.380
+
+Type  : Fast Model Minimum Pulse Width 'vga640480:u1|clk1'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'Keyboard:u3|fok'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

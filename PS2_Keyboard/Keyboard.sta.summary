@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Keyboard:u0|fok'
+Slack : -2.565
+TNS   : -15.855
+
+Type  : Slow Model Setup 'fclk'
+Slack : -2.358
+TNS   : -32.315
+
+Type  : Slow Model Hold 'fclk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'Keyboard:u0|fok'
+Slack : 1.588
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'fclk'
+Slack : -1.941
+TNS   : -39.041
+
+Type  : Slow Model Minimum Pulse Width 'Keyboard:u0|fok'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Keyboard:u0|fok'
+Slack : -0.745
+TNS   : -4.636
+
+Type  : Fast Model Setup 'fclk'
+Slack : -0.082
+TNS   : -0.082
+
+Type  : Fast Model Hold 'fclk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Keyboard:u0|fok'
+Slack : 1.170
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'fclk'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Fast Model Minimum Pulse Width 'Keyboard:u0|fok'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

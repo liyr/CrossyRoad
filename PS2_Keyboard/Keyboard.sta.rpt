@@ -1,0 +1,1336 @@
+TimeQuest Timing Analyzer report for Keyboard
+Thu May 05 16:27:06 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Keyboard:u0|fok'
+ 12. Slow Model Setup: 'fclk'
+ 13. Slow Model Hold: 'fclk'
+ 14. Slow Model Hold: 'Keyboard:u0|fok'
+ 15. Slow Model Minimum Pulse Width: 'fclk'
+ 16. Slow Model Minimum Pulse Width: 'Keyboard:u0|fok'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'Keyboard:u0|fok'
+ 27. Fast Model Setup: 'fclk'
+ 28. Fast Model Hold: 'fclk'
+ 29. Fast Model Hold: 'Keyboard:u0|fok'
+ 30. Fast Model Minimum Pulse Width: 'fclk'
+ 31. Fast Model Minimum Pulse Width: 'Keyboard:u0|fok'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; Keyboard                                                           ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C20Q240C8                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; fclk            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fclk }            ;
+; Keyboard:u0|fok ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Keyboard:u0|fok } ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 297.8 MHz ; 297.8 MHz       ; fclk       ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Keyboard:u0|fok ; -2.565 ; -15.855       ;
+; fclk            ; -2.358 ; -32.315       ;
++-----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow Model Hold Summary                 ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; fclk            ; 0.499 ; 0.000         ;
+; Keyboard:u0|fok ; 1.588 ; 0.000         ;
++-----------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Slow Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; fclk            ; -1.941 ; -39.041       ;
+; Keyboard:u0|fok ; 0.500  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Keyboard:u0|fok'                                                                                              ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node                 ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; -2.565 ; Keyboard:u0|code[1] ; Keyboard:u0|scancode[1] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.148     ; 1.251      ;
+; -2.249 ; Keyboard:u0|code[3] ; Keyboard:u0|scancode[3] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.358     ; 0.967      ;
+; -2.226 ; Keyboard:u0|code[2] ; Keyboard:u0|scancode[2] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.147     ; 0.941      ;
+; -2.212 ; Keyboard:u0|code[0] ; Keyboard:u0|scancode[0] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.118     ; 0.990      ;
+; -2.210 ; Keyboard:u0|code[4] ; Keyboard:u0|scancode[4] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.360     ; 0.957      ;
+; -2.198 ; Keyboard:u0|code[6] ; Keyboard:u0|scancode[6] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.359     ; 0.956      ;
+; -2.195 ; Keyboard:u0|code[5] ; Keyboard:u0|scancode[5] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.363     ; 0.952      ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'fclk'                                                                                                           ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -2.358 ; Keyboard:u0|clk2         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 3.399      ;
+; -2.041 ; Keyboard:u0|state.finish ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.002      ; 3.083      ;
+; -2.022 ; Keyboard:u0|data         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 3.063      ;
+; -1.925 ; Keyboard:u0|clk1         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.966      ;
+; -1.893 ; Keyboard:u0|code[2]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.934      ;
+; -1.891 ; Keyboard:u0|code[2]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.932      ;
+; -1.841 ; Keyboard:u0|code[5]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.881      ;
+; -1.839 ; Keyboard:u0|code[5]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.879      ;
+; -1.818 ; Keyboard:u0|clk2         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.859      ;
+; -1.798 ; Keyboard:u0|code[4]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.838      ;
+; -1.796 ; Keyboard:u0|code[4]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.836      ;
+; -1.736 ; Keyboard:u0|clk1         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.777      ;
+; -1.679 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.720      ;
+; -1.677 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.718      ;
+; -1.658 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.698      ;
+; -1.657 ; Keyboard:u0|state.start  ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.002      ; 2.699      ;
+; -1.656 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.696      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.617 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.657      ;
+; -1.538 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.578      ;
+; -1.536 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.576      ;
+; -1.517 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.558      ;
+; -1.515 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.556      ;
+; -1.446 ; Keyboard:u0|data         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.487      ;
+; -1.431 ; Keyboard:u0|clk2         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.472      ;
+; -1.430 ; Keyboard:u0|clk2         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.471      ;
+; -1.430 ; Keyboard:u0|clk2         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.471      ;
+; -1.426 ; Keyboard:u0|clk2         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.467      ;
+; -1.424 ; Keyboard:u0|clk2         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.465      ;
+; -1.366 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.406      ;
+; -1.364 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.404      ;
+; -1.359 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.399      ;
+; -1.229 ; Keyboard:u0|state.finish ; Keyboard:u0|fok          ; fclk         ; fclk        ; 1.000        ; 0.015      ; 2.284      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.184 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.224      ;
+; -1.139 ; Keyboard:u0|clk2         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.001     ; 2.178      ;
+; -1.126 ; Keyboard:u0|state.parity ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.167      ;
+; -1.121 ; Keyboard:u0|clk2         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.161      ;
+; -1.117 ; Keyboard:u0|clk2         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.157      ;
+; -1.115 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.155      ;
+; -1.113 ; Keyboard:u0|clk2         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.153      ;
+; -1.100 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.002     ; 2.138      ;
+; -1.100 ; Keyboard:u0|state.d2     ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.140      ;
+; -1.090 ; Keyboard:u0|data         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.131      ;
+; -1.089 ; Keyboard:u0|state.d1     ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.129      ;
+; -1.084 ; Keyboard:u0|clk1         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.001     ; 2.123      ;
+; -1.082 ; Keyboard:u0|state.d4     ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.123      ;
+; -1.080 ; Keyboard:u0|state.parity ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.121      ;
+; -1.080 ; Keyboard:u0|state.d5     ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.121      ;
+; -1.071 ; Keyboard:u0|state.d0     ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 2.111      ;
+; -0.998 ; Keyboard:u0|clk1         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.039      ;
+; -0.997 ; Keyboard:u0|clk1         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.038      ;
+; -0.997 ; Keyboard:u0|clk1         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.038      ;
+; -0.993 ; Keyboard:u0|clk1         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.034      ;
+; -0.991 ; Keyboard:u0|clk1         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 2.032      ;
+; -0.964 ; Keyboard:u0|clk1         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 2.003      ;
+; -0.898 ; Keyboard:u0|state.d1     ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.938      ;
+; -0.857 ; Keyboard:u0|data         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.898      ;
+; -0.856 ; Keyboard:u0|data         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.897      ;
+; -0.855 ; Keyboard:u0|data         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.896      ;
+; -0.855 ; Keyboard:u0|data         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.896      ;
+; -0.839 ; Keyboard:u0|clk2         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 1.878      ;
+; -0.821 ; Keyboard:u0|state.d4     ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.861      ;
+; -0.817 ; Keyboard:u0|state.d7     ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.857      ;
+; -0.785 ; Keyboard:u0|state.d7     ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.826      ;
+; -0.779 ; Keyboard:u0|data         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.819      ;
+; -0.764 ; Keyboard:u0|state.d3     ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.805      ;
+; -0.731 ; Keyboard:u0|state.d6     ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.772      ;
+; -0.717 ; Keyboard:u0|state.start  ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.758      ;
+; -0.688 ; Keyboard:u0|clk1         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.728      ;
+; -0.684 ; Keyboard:u0|clk1         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.724      ;
+; -0.682 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.722      ;
+; -0.682 ; Keyboard:u0|data         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 1.721      ;
+; -0.680 ; Keyboard:u0|clk1         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.720      ;
+; -0.647 ; Keyboard:u0|state.d2     ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.687      ;
+; -0.642 ; Keyboard:u0|state.delay  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.002     ; 1.680      ;
+; -0.541 ; Keyboard:u0|data         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.581      ;
+; -0.540 ; Keyboard:u0|data         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.580      ;
+; -0.539 ; Keyboard:u0|data         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.579      ;
+; -0.486 ; Keyboard:u0|state.d5     ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.526      ;
+; -0.482 ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.522      ;
+; -0.176 ; Keyboard:u0|state.d6     ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.216      ;
+; -0.174 ; Keyboard:u0|state.d3     ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.214      ;
+; -0.055 ; Keyboard:u0|clk1         ; Keyboard:u0|clk2         ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.095      ;
+; 0.235  ; Keyboard:u0|state.stop   ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Keyboard:u0|code[6]      ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Keyboard:u0|code[3]      ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Keyboard:u0|code[5]      ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.805      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'fclk'                                                                                                           ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; Keyboard:u0|code[0]      ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[3]      ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[2]      ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[6]      ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[7]      ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[4]      ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[5]      ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|state.start  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Keyboard:u0|code[1]      ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.789 ; Keyboard:u0|clk1         ; Keyboard:u0|clk2         ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.095      ;
+; 0.908 ; Keyboard:u0|state.d3     ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.214      ;
+; 0.910 ; Keyboard:u0|state.d6     ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.216      ;
+; 1.216 ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.522      ;
+; 1.220 ; Keyboard:u0|state.d5     ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.526      ;
+; 1.273 ; Keyboard:u0|data         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.579      ;
+; 1.274 ; Keyboard:u0|data         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.580      ;
+; 1.275 ; Keyboard:u0|data         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.581      ;
+; 1.376 ; Keyboard:u0|state.delay  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.002     ; 1.680      ;
+; 1.381 ; Keyboard:u0|state.d2     ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.687      ;
+; 1.414 ; Keyboard:u0|clk1         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.720      ;
+; 1.416 ; Keyboard:u0|data         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 1.721      ;
+; 1.416 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.722      ;
+; 1.418 ; Keyboard:u0|clk1         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.724      ;
+; 1.422 ; Keyboard:u0|clk1         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.728      ;
+; 1.451 ; Keyboard:u0|state.start  ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.758      ;
+; 1.465 ; Keyboard:u0|state.d6     ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.772      ;
+; 1.498 ; Keyboard:u0|state.d3     ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.805      ;
+; 1.513 ; Keyboard:u0|data         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.819      ;
+; 1.519 ; Keyboard:u0|state.d7     ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.826      ;
+; 1.536 ; Keyboard:u0|clk1         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.843      ;
+; 1.551 ; Keyboard:u0|state.d7     ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.857      ;
+; 1.555 ; Keyboard:u0|state.d4     ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.861      ;
+; 1.573 ; Keyboard:u0|clk2         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 1.878      ;
+; 1.589 ; Keyboard:u0|data         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.896      ;
+; 1.589 ; Keyboard:u0|data         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.896      ;
+; 1.590 ; Keyboard:u0|data         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.897      ;
+; 1.591 ; Keyboard:u0|data         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 1.898      ;
+; 1.632 ; Keyboard:u0|state.d1     ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.938      ;
+; 1.698 ; Keyboard:u0|clk1         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 2.003      ;
+; 1.725 ; Keyboard:u0|clk1         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.032      ;
+; 1.727 ; Keyboard:u0|clk1         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.034      ;
+; 1.731 ; Keyboard:u0|clk1         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.038      ;
+; 1.731 ; Keyboard:u0|clk1         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.038      ;
+; 1.732 ; Keyboard:u0|clk1         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.039      ;
+; 1.805 ; Keyboard:u0|state.d0     ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.111      ;
+; 1.814 ; Keyboard:u0|state.d5     ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.121      ;
+; 1.814 ; Keyboard:u0|state.parity ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.121      ;
+; 1.816 ; Keyboard:u0|state.d4     ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.123      ;
+; 1.818 ; Keyboard:u0|clk1         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.001     ; 2.123      ;
+; 1.823 ; Keyboard:u0|state.d1     ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.129      ;
+; 1.824 ; Keyboard:u0|data         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.131      ;
+; 1.834 ; Keyboard:u0|state.d2     ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.140      ;
+; 1.834 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.002     ; 2.138      ;
+; 1.847 ; Keyboard:u0|clk2         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.153      ;
+; 1.849 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.155      ;
+; 1.851 ; Keyboard:u0|clk2         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.157      ;
+; 1.855 ; Keyboard:u0|clk2         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.161      ;
+; 1.860 ; Keyboard:u0|state.parity ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.167      ;
+; 1.873 ; Keyboard:u0|clk2         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.001     ; 2.178      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.918 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.224      ;
+; 1.963 ; Keyboard:u0|state.finish ; Keyboard:u0|fok          ; fclk         ; fclk        ; 0.000        ; 0.015      ; 2.284      ;
+; 2.093 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.399      ;
+; 2.098 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.404      ;
+; 2.100 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.406      ;
+; 2.114 ; Keyboard:u0|clk2         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.421      ;
+; 2.119 ; Keyboard:u0|clk1         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.426      ;
+; 2.158 ; Keyboard:u0|data         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.465      ;
+; 2.158 ; Keyboard:u0|clk2         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.465      ;
+; 2.160 ; Keyboard:u0|clk2         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.467      ;
+; 2.160 ; Keyboard:u0|clk2         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.467      ;
+; 2.164 ; Keyboard:u0|clk2         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.471      ;
+; 2.164 ; Keyboard:u0|clk2         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.471      ;
+; 2.165 ; Keyboard:u0|clk2         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.472      ;
+; 2.180 ; Keyboard:u0|data         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.487      ;
+; 2.249 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.556      ;
+; 2.251 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.558      ;
+; 2.270 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.576      ;
+; 2.272 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.578      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.351 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.657      ;
+; 2.390 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.696      ;
+; 2.391 ; Keyboard:u0|state.start  ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.002      ; 2.699      ;
+; 2.392 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 2.698      ;
+; 2.411 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.718      ;
+; 2.413 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 2.720      ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Keyboard:u0|fok'                                                                                              ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node                 ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; 1.588 ; Keyboard:u0|code[2] ; Keyboard:u0|scancode[2] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.147     ; 0.941      ;
+; 1.608 ; Keyboard:u0|code[0] ; Keyboard:u0|scancode[0] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.118     ; 0.990      ;
+; 1.815 ; Keyboard:u0|code[6] ; Keyboard:u0|scancode[6] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.359     ; 0.956      ;
+; 1.815 ; Keyboard:u0|code[5] ; Keyboard:u0|scancode[5] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.363     ; 0.952      ;
+; 1.817 ; Keyboard:u0|code[4] ; Keyboard:u0|scancode[4] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.360     ; 0.957      ;
+; 1.825 ; Keyboard:u0|code[3] ; Keyboard:u0|scancode[3] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.358     ; 0.967      ;
+; 1.899 ; Keyboard:u0|code[1] ; Keyboard:u0|scancode[1] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.148     ; 1.251      ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'fclk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; fclk  ; Rise       ; fclk                     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|clk1         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|clk1         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|clk2         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|clk2         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|data         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|data         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|fok          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|fok          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d0     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d0     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d1     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d1     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d2     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d2     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d3     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d3     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d4     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d4     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d5     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d5     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d6     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d6     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d7     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d7     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.delay  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.delay  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.finish ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.finish ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.parity ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.parity ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.start  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.start  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.stop   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.stop   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|clk1|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|clk1|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|clk2|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|clk2|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[4]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[4]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[5]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[5]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[6]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[6]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[7]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[7]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|data|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|data|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|fok|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|fok|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.delay|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.delay|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.finish|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Keyboard:u0|fok'                                                                 ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                  ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[1] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[1] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[2] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[2] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[3] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[3] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[4] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[4] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[5] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[5] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[6] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[6] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[0]|dataa    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[0]|dataa    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[1]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[1]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[2]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[2]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[3]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[3]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[4]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[4]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[5]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[5]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[6]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[6]|datac    ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; clkin     ; fclk       ; 6.255 ; 6.255 ; Rise       ; fclk            ;
+; datain    ; fclk       ; 5.801 ; 5.801 ; Rise       ; fclk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; clkin     ; fclk       ; -5.989 ; -5.989 ; Rise       ; fclk            ;
+; datain    ; fclk       ; -5.535 ; -5.535 ; Rise       ; fclk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 11.098 ; 11.098 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 11.098 ; 11.098 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 10.389 ; 10.389 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 10.370 ; 10.370 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 10.376 ; 10.376 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 10.026 ; 10.026 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 10.031 ; 10.031 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 9.693  ; 9.693  ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 11.803 ; 11.803 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 9.505  ; 9.505  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 9.826  ; 9.826  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 9.819  ; 9.819  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 9.867  ; 9.867  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 11.803 ; 11.803 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 10.914 ; 10.914 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 11.016 ; 11.016 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 9.219  ; 9.219  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 10.611 ; 10.611 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 9.919  ; 9.919  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 9.896  ; 9.896  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 9.855  ; 9.855  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 9.545  ; 9.545  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 9.541  ; 9.541  ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 9.219  ; 9.219  ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 9.119  ; 9.119  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 9.119  ; 9.119  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 9.436  ; 9.436  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 9.451  ; 9.451  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 9.480  ; 9.480  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 11.468 ; 11.468 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 10.443 ; 10.443 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 10.544 ; 10.544 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------+
+; Fast Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Keyboard:u0|fok ; -0.745 ; -4.636        ;
+; fclk            ; -0.082 ; -0.082        ;
++-----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast Model Hold Summary                 ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; fclk            ; 0.215 ; 0.000         ;
+; Keyboard:u0|fok ; 1.170 ; 0.000         ;
++-----------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Fast Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; fclk            ; -1.380 ; -26.380       ;
+; Keyboard:u0|fok ; 0.500  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Keyboard:u0|fok'                                                                                              ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node                 ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; -0.745 ; Keyboard:u0|code[1] ; Keyboard:u0|scancode[1] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.323     ; 0.437      ;
+; -0.661 ; Keyboard:u0|code[0] ; Keyboard:u0|scancode[0] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.324     ; 0.372      ;
+; -0.654 ; Keyboard:u0|code[3] ; Keyboard:u0|scancode[3] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.385     ; 0.363      ;
+; -0.648 ; Keyboard:u0|code[4] ; Keyboard:u0|scancode[4] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.387     ; 0.358      ;
+; -0.645 ; Keyboard:u0|code[5] ; Keyboard:u0|scancode[5] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.390     ; 0.356      ;
+; -0.642 ; Keyboard:u0|code[6] ; Keyboard:u0|scancode[6] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.386     ; 0.358      ;
+; -0.641 ; Keyboard:u0|code[2] ; Keyboard:u0|scancode[2] ; fclk         ; Keyboard:u0|fok ; 0.500        ; -0.321     ; 0.349      ;
++--------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'fclk'                                                                                                           ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -0.082 ; Keyboard:u0|clk2         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 1.115      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 1.001      ;
+; 0.034  ; Keyboard:u0|data         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.999      ;
+; 0.040  ; Keyboard:u0|clk1         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.993      ;
+; 0.041  ; Keyboard:u0|state.finish ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.002      ; 0.993      ;
+; 0.084  ; Keyboard:u0|code[2]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.949      ;
+; 0.086  ; Keyboard:u0|code[2]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.947      ;
+; 0.097  ; Keyboard:u0|clk2         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.936      ;
+; 0.109  ; Keyboard:u0|code[5]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.923      ;
+; 0.111  ; Keyboard:u0|code[5]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.921      ;
+; 0.112  ; Keyboard:u0|clk1         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.921      ;
+; 0.115  ; Keyboard:u0|code[4]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.917      ;
+; 0.117  ; Keyboard:u0|code[4]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.915      ;
+; 0.126  ; Keyboard:u0|state.start  ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.002      ; 0.908      ;
+; 0.147  ; Keyboard:u0|code[3]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.885      ;
+; 0.148  ; Keyboard:u0|code[1]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.885      ;
+; 0.149  ; Keyboard:u0|code[3]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.883      ;
+; 0.150  ; Keyboard:u0|code[1]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.883      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.153  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.879      ;
+; 0.187  ; Keyboard:u0|code[7]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.845      ;
+; 0.189  ; Keyboard:u0|code[7]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.843      ;
+; 0.197  ; Keyboard:u0|code[0]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.836      ;
+; 0.199  ; Keyboard:u0|code[0]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.834      ;
+; 0.212  ; Keyboard:u0|clk2         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.821      ;
+; 0.212  ; Keyboard:u0|clk2         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.821      ;
+; 0.213  ; Keyboard:u0|clk2         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.820      ;
+; 0.216  ; Keyboard:u0|clk2         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.817      ;
+; 0.216  ; Keyboard:u0|clk2         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.817      ;
+; 0.221  ; Keyboard:u0|data         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.812      ;
+; 0.234  ; Keyboard:u0|state.finish ; Keyboard:u0|fok          ; fclk         ; fclk        ; 1.000        ; 0.012      ; 0.810      ;
+; 0.237  ; Keyboard:u0|code[6]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.795      ;
+; 0.239  ; Keyboard:u0|code[6]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.793      ;
+; 0.262  ; Keyboard:u0|state.stop   ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.770      ;
+; 0.283  ; Keyboard:u0|state.parity ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.750      ;
+; 0.285  ; Keyboard:u0|state.parity ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.748      ;
+; 0.297  ; Keyboard:u0|clk2         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.735      ;
+; 0.299  ; Keyboard:u0|clk2         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.733      ;
+; 0.302  ; Keyboard:u0|clk2         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.730      ;
+; 0.303  ; Keyboard:u0|clk2         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.729      ;
+; 0.310  ; Keyboard:u0|state.d1     ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.722      ;
+; 0.321  ; Keyboard:u0|state.stop   ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.002     ; 0.709      ;
+; 0.329  ; Keyboard:u0|clk2         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.001     ; 0.702      ;
+; 0.331  ; Keyboard:u0|state.d1     ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.701      ;
+; 0.332  ; Keyboard:u0|state.d2     ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.700      ;
+; 0.334  ; Keyboard:u0|clk1         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.699      ;
+; 0.334  ; Keyboard:u0|clk1         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.699      ;
+; 0.335  ; Keyboard:u0|clk1         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.698      ;
+; 0.338  ; Keyboard:u0|clk1         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.695      ;
+; 0.338  ; Keyboard:u0|clk1         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.695      ;
+; 0.340  ; Keyboard:u0|state.d5     ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.693      ;
+; 0.340  ; Keyboard:u0|data         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.693      ;
+; 0.341  ; Keyboard:u0|clk1         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 0.690      ;
+; 0.341  ; Keyboard:u0|clk1         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.001     ; 0.690      ;
+; 0.343  ; Keyboard:u0|state.d4     ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.690      ;
+; 0.345  ; Keyboard:u0|state.d0     ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.687      ;
+; 0.370  ; Keyboard:u0|state.d4     ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.662      ;
+; 0.371  ; Keyboard:u0|state.d7     ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.661      ;
+; 0.380  ; Keyboard:u0|clk2         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 0.651      ;
+; 0.396  ; Keyboard:u0|data         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.637      ;
+; 0.397  ; Keyboard:u0|data         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.636      ;
+; 0.398  ; Keyboard:u0|data         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.635      ;
+; 0.398  ; Keyboard:u0|data         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.635      ;
+; 0.418  ; Keyboard:u0|data         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.614      ;
+; 0.419  ; Keyboard:u0|clk1         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.613      ;
+; 0.419  ; Keyboard:u0|data         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 1.000        ; -0.001     ; 0.612      ;
+; 0.421  ; Keyboard:u0|clk1         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.611      ;
+; 0.424  ; Keyboard:u0|state.start  ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.609      ;
+; 0.424  ; Keyboard:u0|clk1         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.608      ;
+; 0.425  ; Keyboard:u0|clk1         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.607      ;
+; 0.427  ; Keyboard:u0|state.d3     ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.606      ;
+; 0.430  ; Keyboard:u0|state.d7     ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.603      ;
+; 0.443  ; Keyboard:u0|state.delay  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 1.000        ; -0.002     ; 0.587      ;
+; 0.444  ; Keyboard:u0|state.d6     ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.001      ; 0.589      ;
+; 0.463  ; Keyboard:u0|state.d5     ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.569      ;
+; 0.464  ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.568      ;
+; 0.465  ; Keyboard:u0|state.d2     ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.567      ;
+; 0.485  ; Keyboard:u0|data         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.547      ;
+; 0.487  ; Keyboard:u0|data         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.545      ;
+; 0.488  ; Keyboard:u0|data         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.544      ;
+; 0.548  ; Keyboard:u0|state.d6     ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.484      ;
+; 0.551  ; Keyboard:u0|state.d3     ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.481      ;
+; 0.616  ; Keyboard:u0|clk1         ; Keyboard:u0|clk2         ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.416      ;
+; 0.665  ; Keyboard:u0|state.stop   ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; Keyboard:u0|code[6]      ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; Keyboard:u0|code[5]      ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; Keyboard:u0|code[3]      ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 1.000        ; 0.000      ; 0.367      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'fclk'                                                                                                           ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Keyboard:u0|code[0]      ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[3]      ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[2]      ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[6]      ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[7]      ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[4]      ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[5]      ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|state.start  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:u0|code[1]      ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.264 ; Keyboard:u0|clk1         ; Keyboard:u0|clk2         ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.416      ;
+; 0.329 ; Keyboard:u0|state.d3     ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.481      ;
+; 0.332 ; Keyboard:u0|state.d6     ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.484      ;
+; 0.392 ; Keyboard:u0|data         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.544      ;
+; 0.393 ; Keyboard:u0|data         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.545      ;
+; 0.395 ; Keyboard:u0|data         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.547      ;
+; 0.415 ; Keyboard:u0|state.d2     ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.567      ;
+; 0.416 ; Keyboard:u0|state.d0     ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.568      ;
+; 0.417 ; Keyboard:u0|state.d5     ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.569      ;
+; 0.436 ; Keyboard:u0|state.d6     ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.589      ;
+; 0.437 ; Keyboard:u0|state.delay  ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.002     ; 0.587      ;
+; 0.450 ; Keyboard:u0|state.d7     ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.603      ;
+; 0.453 ; Keyboard:u0|state.d3     ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.606      ;
+; 0.455 ; Keyboard:u0|clk1         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.607      ;
+; 0.456 ; Keyboard:u0|state.start  ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.609      ;
+; 0.456 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.608      ;
+; 0.459 ; Keyboard:u0|clk1         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.611      ;
+; 0.461 ; Keyboard:u0|data         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 0.612      ;
+; 0.461 ; Keyboard:u0|clk1         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.613      ;
+; 0.462 ; Keyboard:u0|data         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.614      ;
+; 0.482 ; Keyboard:u0|data         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.635      ;
+; 0.482 ; Keyboard:u0|data         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.635      ;
+; 0.483 ; Keyboard:u0|data         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.636      ;
+; 0.484 ; Keyboard:u0|data         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.637      ;
+; 0.500 ; Keyboard:u0|clk2         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 0.651      ;
+; 0.507 ; Keyboard:u0|clk1         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.660      ;
+; 0.509 ; Keyboard:u0|state.d7     ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; Keyboard:u0|state.d4     ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.662      ;
+; 0.535 ; Keyboard:u0|state.d0     ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.687      ;
+; 0.537 ; Keyboard:u0|state.d4     ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.690      ;
+; 0.539 ; Keyboard:u0|clk1         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.001     ; 0.690      ;
+; 0.539 ; Keyboard:u0|clk1         ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.001     ; 0.690      ;
+; 0.540 ; Keyboard:u0|data         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.693      ;
+; 0.540 ; Keyboard:u0|state.d5     ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.693      ;
+; 0.542 ; Keyboard:u0|clk1         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.695      ;
+; 0.542 ; Keyboard:u0|clk1         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.695      ;
+; 0.545 ; Keyboard:u0|clk1         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.698      ;
+; 0.546 ; Keyboard:u0|clk1         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.699      ;
+; 0.546 ; Keyboard:u0|clk1         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.699      ;
+; 0.548 ; Keyboard:u0|state.d2     ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.700      ;
+; 0.549 ; Keyboard:u0|state.d1     ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551 ; Keyboard:u0|clk2         ; Keyboard:u0|state.start  ; fclk         ; fclk        ; 0.000        ; -0.001     ; 0.702      ;
+; 0.559 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.finish ; fclk         ; fclk        ; 0.000        ; -0.002     ; 0.709      ;
+; 0.570 ; Keyboard:u0|state.d1     ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.722      ;
+; 0.577 ; Keyboard:u0|clk2         ; Keyboard:u0|code[1]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.729      ;
+; 0.578 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d0     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.730      ;
+; 0.581 ; Keyboard:u0|clk2         ; Keyboard:u0|code[2]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.733      ;
+; 0.583 ; Keyboard:u0|clk2         ; Keyboard:u0|code[0]      ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.735      ;
+; 0.595 ; Keyboard:u0|state.parity ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.748      ;
+; 0.597 ; Keyboard:u0|state.parity ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.750      ;
+; 0.618 ; Keyboard:u0|state.stop   ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.770      ;
+; 0.641 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.793      ;
+; 0.643 ; Keyboard:u0|code[6]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.795      ;
+; 0.646 ; Keyboard:u0|state.finish ; Keyboard:u0|fok          ; fclk         ; fclk        ; 0.000        ; 0.012      ; 0.810      ;
+; 0.648 ; Keyboard:u0|clk2         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.801      ;
+; 0.650 ; Keyboard:u0|clk2         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.803      ;
+; 0.659 ; Keyboard:u0|data         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.812      ;
+; 0.661 ; Keyboard:u0|clk1         ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.814      ;
+; 0.661 ; Keyboard:u0|data         ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.814      ;
+; 0.664 ; Keyboard:u0|clk2         ; Keyboard:u0|code[7]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.817      ;
+; 0.664 ; Keyboard:u0|clk2         ; Keyboard:u0|code[4]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.817      ;
+; 0.667 ; Keyboard:u0|clk2         ; Keyboard:u0|code[3]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.820      ;
+; 0.668 ; Keyboard:u0|clk2         ; Keyboard:u0|code[6]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.821      ;
+; 0.668 ; Keyboard:u0|clk2         ; Keyboard:u0|code[5]      ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.821      ;
+; 0.681 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.834      ;
+; 0.683 ; Keyboard:u0|code[0]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.836      ;
+; 0.691 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.843      ;
+; 0.693 ; Keyboard:u0|code[7]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.845      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d3     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d4     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d5     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d6     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d7     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.parity ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.727 ; Keyboard:u0|clk1         ; Keyboard:u0|state.d1     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.879      ;
+; 0.730 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.883      ;
+; 0.731 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.883      ;
+; 0.732 ; Keyboard:u0|code[1]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.885      ;
+; 0.733 ; Keyboard:u0|code[3]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.885      ;
+; 0.754 ; Keyboard:u0|state.start  ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.002      ; 0.908      ;
+; 0.763 ; Keyboard:u0|code[4]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.915      ;
+; 0.765 ; Keyboard:u0|code[4]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.917      ;
+; 0.769 ; Keyboard:u0|code[5]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.921      ;
+; 0.771 ; Keyboard:u0|code[5]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.000      ; 0.923      ;
+; 0.794 ; Keyboard:u0|code[2]      ; Keyboard:u0|state.stop   ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.947      ;
+; 0.796 ; Keyboard:u0|code[2]      ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.001      ; 0.949      ;
+; 0.839 ; Keyboard:u0|state.finish ; Keyboard:u0|state.delay  ; fclk         ; fclk        ; 0.000        ; 0.002      ; 0.993      ;
+; 0.849 ; Keyboard:u0|clk2         ; Keyboard:u0|state.d2     ; fclk         ; fclk        ; 0.000        ; 0.000      ; 1.001      ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Keyboard:u0|fok'                                                                                              ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node                 ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+; 1.170 ; Keyboard:u0|code[2] ; Keyboard:u0|scancode[2] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.321     ; 0.349      ;
+; 1.196 ; Keyboard:u0|code[0] ; Keyboard:u0|scancode[0] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.324     ; 0.372      ;
+; 1.244 ; Keyboard:u0|code[6] ; Keyboard:u0|scancode[6] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.386     ; 0.358      ;
+; 1.245 ; Keyboard:u0|code[4] ; Keyboard:u0|scancode[4] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.387     ; 0.358      ;
+; 1.246 ; Keyboard:u0|code[5] ; Keyboard:u0|scancode[5] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.390     ; 0.356      ;
+; 1.248 ; Keyboard:u0|code[3] ; Keyboard:u0|scancode[3] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.385     ; 0.363      ;
+; 1.260 ; Keyboard:u0|code[1] ; Keyboard:u0|scancode[1] ; fclk         ; Keyboard:u0|fok ; -0.500       ; -0.323     ; 0.437      ;
++-------+---------------------+-------------------------+--------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'fclk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; fclk  ; Rise       ; fclk                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|clk1         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|clk1         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|clk2         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|clk2         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|code[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|code[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|data         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|data         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|fok          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|fok          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d1     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d1     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d2     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d2     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d3     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d3     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d4     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d4     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d5     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d5     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d6     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d6     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.d7     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.d7     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.delay  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.delay  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.finish ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.finish ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.parity ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.parity ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.start  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.start  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fclk  ; Rise       ; Keyboard:u0|state.stop   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fclk  ; Rise       ; Keyboard:u0|state.stop   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; fclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; fclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|clk1|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|clk1|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|clk2|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|clk2|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[4]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[4]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[5]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[5]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[6]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[6]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|code[7]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|code[7]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|data|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|data|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|fok|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|fok|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.d7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.d7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.delay|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fclk  ; Rise       ; u0|state.delay|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fclk  ; Rise       ; u0|state.finish|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Keyboard:u0|fok'                                                                 ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                  ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[1] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[1] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[2] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[2] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[3] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[3] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[4] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[4] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[5] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[5] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[6] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Fall       ; Keyboard:u0|scancode[6] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|fok~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[0]|dataa    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[0]|dataa    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[1]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[1]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[2]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[2]|datab    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[3]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[3]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[4]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[4]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[5]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[5]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Keyboard:u0|fok ; Rise       ; u0|scancode[6]|datac    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Keyboard:u0|fok ; Rise       ; u0|scancode[6]|datac    ;
++-------+--------------+----------------+------------------+-----------------+------------+-------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; clkin     ; fclk       ; 2.540 ; 2.540 ; Rise       ; fclk            ;
+; datain    ; fclk       ; 2.376 ; 2.376 ; Rise       ; fclk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; clkin     ; fclk       ; -2.420 ; -2.420 ; Rise       ; fclk            ;
+; datain    ; fclk       ; -2.256 ; -2.256 ; Rise       ; fclk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 4.598 ; 4.598 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 4.598 ; 4.598 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 4.383 ; 4.383 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 4.362 ; 4.362 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 4.370 ; 4.370 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 4.281 ; 4.281 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 4.282 ; 4.282 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 4.192 ; 4.192 ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 4.998 ; 4.998 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 4.104 ; 4.104 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 4.187 ; 4.187 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 4.177 ; 4.177 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 4.224 ; 4.224 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 4.998 ; 4.998 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 4.675 ; 4.675 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 4.696 ; 4.696 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 4.054 ; 4.054 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 4.457 ; 4.457 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 4.246 ; 4.246 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 4.227 ; 4.227 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 4.224 ; 4.224 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 4.140 ; 4.140 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 4.140 ; 4.140 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 4.054 ; 4.054 ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 4.022 ; 4.022 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 4.022 ; 4.022 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 4.096 ; 4.096 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 4.108 ; 4.108 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 4.138 ; 4.138 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 4.931 ; 4.931 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 4.540 ; 4.540 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 4.569 ; 4.569 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.565  ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+;  Keyboard:u0|fok ; -2.565  ; 1.170 ; N/A      ; N/A     ; 0.500               ;
+;  fclk            ; -2.358  ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -48.17  ; 0.0   ; 0.0      ; 0.0     ; -39.041             ;
+;  Keyboard:u0|fok ; -15.855 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  fclk            ; -32.315 ; 0.000 ; N/A      ; N/A     ; -39.041             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; clkin     ; fclk       ; 6.255 ; 6.255 ; Rise       ; fclk            ;
+; datain    ; fclk       ; 5.801 ; 5.801 ; Rise       ; fclk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; clkin     ; fclk       ; -2.420 ; -2.420 ; Rise       ; fclk            ;
+; datain    ; fclk       ; -2.256 ; -2.256 ; Rise       ; fclk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 11.098 ; 11.098 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 11.098 ; 11.098 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 10.389 ; 10.389 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 10.370 ; 10.370 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 10.376 ; 10.376 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 10.026 ; 10.026 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 10.031 ; 10.031 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 9.693  ; 9.693  ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 11.803 ; 11.803 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 9.505  ; 9.505  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 9.826  ; 9.826  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 9.819  ; 9.819  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 9.867  ; 9.867  ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 11.803 ; 11.803 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 10.914 ; 10.914 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 11.016 ; 11.016 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; seg0[*]   ; Keyboard:u0|fok ; 4.054 ; 4.054 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[0]  ; Keyboard:u0|fok ; 4.457 ; 4.457 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[1]  ; Keyboard:u0|fok ; 4.246 ; 4.246 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[2]  ; Keyboard:u0|fok ; 4.227 ; 4.227 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[3]  ; Keyboard:u0|fok ; 4.224 ; 4.224 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[4]  ; Keyboard:u0|fok ; 4.140 ; 4.140 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[5]  ; Keyboard:u0|fok ; 4.140 ; 4.140 ; Fall       ; Keyboard:u0|fok ;
+;  seg0[6]  ; Keyboard:u0|fok ; 4.054 ; 4.054 ; Fall       ; Keyboard:u0|fok ;
+; seg1[*]   ; Keyboard:u0|fok ; 4.022 ; 4.022 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[0]  ; Keyboard:u0|fok ; 4.022 ; 4.022 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[1]  ; Keyboard:u0|fok ; 4.096 ; 4.096 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[2]  ; Keyboard:u0|fok ; 4.108 ; 4.108 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[3]  ; Keyboard:u0|fok ; 4.138 ; 4.138 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[4]  ; Keyboard:u0|fok ; 4.931 ; 4.931 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[5]  ; Keyboard:u0|fok ; 4.540 ; 4.540 ; Fall       ; Keyboard:u0|fok ;
+;  seg1[6]  ; Keyboard:u0|fok ; 4.569 ; 4.569 ; Fall       ; Keyboard:u0|fok ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Transfers                                                          ;
++------------+-----------------+----------+----------+----------+----------+
+; From Clock ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------------+----------+----------+----------+----------+
+; fclk       ; fclk            ; 115      ; 0        ; 0        ; 0        ;
+; fclk       ; Keyboard:u0|fok ; 0        ; 0        ; 7        ; 0        ;
++------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------------+
+; Hold Transfers                                                           ;
++------------+-----------------+----------+----------+----------+----------+
+; From Clock ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------------+----------+----------+----------+----------+
+; fclk       ; fclk            ; 115      ; 0        ; 0        ; 0        ;
+; fclk       ; Keyboard:u0|fok ; 0        ; 0        ; 7        ; 0        ;
++------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 24    ; 24   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 56    ; 56   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu May 05 16:27:05 2016
+Info: Command: quartus_sta Keyboard_play -c Keyboard
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Keyboard.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Keyboard:u0|fok Keyboard:u0|fok
+    Info (332105): create_clock -period 1.000 -name fclk fclk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.565
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.565       -15.855 Keyboard:u0|fok 
+    Info (332119):    -2.358       -32.315 fclk 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 fclk 
+    Info (332119):     1.588         0.000 Keyboard:u0|fok 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -39.041 fclk 
+    Info (332119):     0.500         0.000 Keyboard:u0|fok 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.745
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.745        -4.636 Keyboard:u0|fok 
+    Info (332119):    -0.082        -0.082 fclk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 fclk 
+    Info (332119):     1.170         0.000 Keyboard:u0|fok 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -26.380 fclk 
+    Info (332119):     0.500         0.000 Keyboard:u0|fok 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 467 megabytes
+    Info: Processing ended: Thu May 05 16:27:06 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
