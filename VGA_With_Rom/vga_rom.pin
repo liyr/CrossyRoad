@@ -145,17 +145,17 @@ GND                          : 74        : gnd    :                   :         
 GND                          : 75        : gnd    :                   :         :           :                
 VCCINT                       : 76        : power  :                   : 1.2V    :           :                
 VCCIO8                       : 77        : power  :                   : 3.3V    : 8         :                
-opt[6]                       : 78        : output : 3.3-V LVTTL       :         : 8         : Y              
-opt[5]                       : 79        : output : 3.3-V LVTTL       :         : 8         : Y              
-opt[4]                       : 80        : output : 3.3-V LVTTL       :         : 8         : Y              
+GND*                         : 78        :        :                   :         : 8         :                
+GND*                         : 79        :        :                   :         : 8         :                
+GND*                         : 80        :        :                   :         : 8         :                
 GND                          : 81        : gnd    :                   :         :           :                
 VCCINT                       : 82        : power  :                   : 1.2V    :           :                
 VCCIO8                       : 83        : power  :                   : 3.3V    : 8         :                
-opt[3]                       : 84        : output : 3.3-V LVTTL       :         : 8         : Y              
+GND*                         : 84        :        :                   :         : 8         :                
 GND                          : 85        : gnd    :                   :         :           :                
-opt[2]                       : 86        : output : 3.3-V LVTTL       :         : 8         : Y              
-opt[1]                       : 87        : output : 3.3-V LVTTL       :         : 8         : Y              
-opt[0]                       : 88        : output : 3.3-V LVTTL       :         : 8         : Y              
+GND*                         : 86        :        :                   :         : 8         :                
+GND*                         : 87        :        :                   :         : 8         :                
+GND*                         : 88        :        :                   :         : 8         :                
 GND                          : 89        : gnd    :                   :         :           :                
 GND*                         : 90        :        :                   :         : 8         :                
 GND+                         : 91        :        :                   :         : 8         :                

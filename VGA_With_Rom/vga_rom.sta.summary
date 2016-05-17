@@ -3,35 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'vga640480:u1|clk'
-Slack : -6.422
-TNS   : -1783.778
+Slack : -6.582
+TNS   : -1806.808
 
 Type  : Slow Model Setup 'clk_0'
-Slack : -2.107
-TNS   : -33.063
+Slack : -2.665
+TNS   : -41.038
 
 Type  : Slow Model Setup 'Keyboard:u3|fok'
-Slack : -1.121
-TNS   : -8.082
+Slack : -2.296
+TNS   : -17.871
 
 Type  : Slow Model Setup 'vga640480:u1|clk1'
 Slack : 1.091
 TNS   : 0.000
 
 Type  : Slow Model Hold 'clk_0'
-Slack : -2.964
-TNS   : -2.964
+Slack : -2.956
+TNS   : -2.956
 
 Type  : Slow Model Hold 'vga640480:u1|clk1'
 Slack : -0.857
 TNS   : -0.857
 
-Type  : Slow Model Hold 'Keyboard:u3|fok'
-Slack : 0.471
+Type  : Slow Model Hold 'vga640480:u1|clk'
+Slack : 0.296
 TNS   : 0.000
 
-Type  : Slow Model Hold 'vga640480:u1|clk'
-Slack : 0.499
+Type  : Slow Model Hold 'Keyboard:u3|fok'
+Slack : 1.599
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'vga640480:u1|clk'
@@ -51,24 +51,24 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'vga640480:u1|clk'
-Slack : -2.125
-TNS   : -334.140
+Slack : -2.172
+TNS   : -332.816
 
 Type  : Fast Model Setup 'Keyboard:u3|fok'
-Slack : -0.281
-TNS   : -1.920
+Slack : -0.687
+TNS   : -5.267
 
 Type  : Fast Model Setup 'clk_0'
-Slack : 0.036
-TNS   : 0.000
+Slack : -0.111
+TNS   : -0.210
 
 Type  : Fast Model Setup 'vga640480:u1|clk1'
 Slack : 0.773
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk_0'
-Slack : -1.780
-TNS   : -1.780
+Slack : -1.775
+TNS   : -1.775
 
 Type  : Fast Model Hold 'vga640480:u1|clk1'
 Slack : -0.393
@@ -79,7 +79,7 @@ Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Hold 'Keyboard:u3|fok'
-Slack : 0.798
+Slack : 1.198
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'vga640480:u1|clk'
