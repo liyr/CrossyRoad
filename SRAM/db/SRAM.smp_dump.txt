@@ -1,0 +1,16 @@
+
+State Machine - |SRAM|NextState
+Name NextState.WRITE_2 NextState.WRITE_1 NextState.READ_2 NextState.READ_1 NextState.IDLE 
+NextState.IDLE 0 0 0 0 0 
+NextState.READ_1 0 0 0 1 1 
+NextState.READ_2 0 0 1 0 1 
+NextState.WRITE_1 0 1 0 0 1 
+NextState.WRITE_2 1 0 0 0 1 
+
+State Machine - |SRAM|CurrentState
+Name CurrentState.WRITE_2 CurrentState.WRITE_1 CurrentState.READ_2 CurrentState.READ_1 CurrentState.IDLE 
+CurrentState.IDLE 0 0 0 0 0 
+CurrentState.READ_1 0 0 0 1 1 
+CurrentState.READ_2 0 0 1 0 1 
+CurrentState.WRITE_1 0 1 0 0 1 
+CurrentState.WRITE_2 1 0 0 0 1 
